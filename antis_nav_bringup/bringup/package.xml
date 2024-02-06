@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?><package format="3">
   <name>antis_nav_bringup</name>
-  <version>0.12.0</version>
+  <version>0.12.1</version>
   <description>Bringup scripts and configurations for the navigation2 stack</description>
   <maintainer email="michael.jeronimo@intel.com">Michael Jeronimo</maintainer>
   <maintainer email="stevenmacenski@gmail.com">Steve Macenski</maintainer>
