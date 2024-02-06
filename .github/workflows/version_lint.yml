@@ -64,7 +64,7 @@ jobs:
 
           # Version check from update
           DESIRED_VERSION="${major}.${minor}.${patch}"
-          echo "$DESIRED_VERSION"
+          echo "Correct version number: $DESIRED_VERSION"
 
           # Find all package.xml files and loop through them
           IS_FAILED=0
