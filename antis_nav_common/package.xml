@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?><package format="3">
   <name>antis_nav_common</name>
-  <version>0.11.3</version>
+  <version>0.12.0</version>
   <description>Common support functionality used throughout the antis_navigation stack</description>
   <maintainer email="kmjung@robotis.com">kayman</maintainer>
   <maintainer email="osi@robotis.com">seungiloh</maintainer>
