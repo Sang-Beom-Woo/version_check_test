@@ -66,22 +66,22 @@ jobs:
           DESIRED_VERSION="${major}.${middle}.${minor}"
 
           # Find all package.xml files and loop through them
-          IS_FALIED=0
+          IS_FAILED=0
           find . -type f -name "package.xml" | while read -r package_file; do
             # Extract the version number using grep and sed
             version=$(grep -oP '(?<=<version>)[^<]+' "$package_file" | sed -n 1p)
 
             if [[ "$version" != "$DESIRED_VERSION" ]]; then
               echo "Error in package.xml file: $package_file, version: $version"
-              IS_FALIED=1
+              IS_FAILED=1
             fi
-
+          done
 
           CHANGELOG_VERSION=$(awk '/^[0-9]+\.[0-9]+\.[0-9]+/ { gsub(/[()]/, "", $1); print $1; exit }' CHANGELOG.rst)
 
           if [[ "$CHANGELOG_VERSION" != "$DESIRED_VERSION" ]]; then
             echo "Error in CHANGELOG.rst, version: $CHANGELOG_VERSION"
-            IS_FALIED=1
+            IS_FAILED=1
           fi
 
           if [[ "$IS_FAILED" == 1 ]]; then
