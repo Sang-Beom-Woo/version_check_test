@@ -84,7 +84,7 @@ jobs:
             IS_FALIED=1
           fi
 
-          if [[ "$IS_FAILED" == 1]]; then
+          if [[ "$IS_FAILED" == 1 ]]; then
             exit 1
           fi
         env:
