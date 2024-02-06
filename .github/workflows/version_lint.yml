@@ -84,6 +84,8 @@ jobs:
             IS_FALIED=1
           fi
 
-          exit IS_FALIED
+          if [[ $IS_FAILED]]; then
+            exit 1
+          fi
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
