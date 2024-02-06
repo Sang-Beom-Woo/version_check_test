@@ -38,9 +38,9 @@ jobs:
 
           # Get the desired VERSION
           if [[ "$PR_BASE" == "develop" ]]; then
-            BASE_VERSION="$DEVEL_VER" # $(awk '/^[0-9]+\.[0-9]+\.[0-9]+/ { gsub(/[()]/, "", $1); print $1; exit }' $GITHUB_WORKSPACE/develop_branch_code/CHANGELOG.rst)
+            BASE_VERSION="$DEVEL_VER"
           elif [[ "$PR_BASE" == "main" ]]; then
-            BASE_VERSION="$MAIN_VER" # $(awk '/^[0-9]+\.[0-9]+\.[0-9]+/ { gsub(/[()]/, "", $1); print $1; exit }' $GITHUB_WORKSPACE/main_branch_code/CHANGELOG.rst)
+            BASE_VERSION="$MAIN_VER"
           fi
 
           # Parse version number
@@ -63,7 +63,7 @@ jobs:
           fi
 
           # Version check from update
-          DESIRED_VERSION="${major}.${middle}.${minor}"
+          DESIRED_VERSION="${major}.${minor}.${patch}"
           echo "$DESIRED_VERSION"
 
           # Find all package.xml files and loop through them
