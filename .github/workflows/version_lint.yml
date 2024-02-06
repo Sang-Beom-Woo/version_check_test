@@ -51,7 +51,9 @@ jobs:
           # update version by rule
           if [[ "$PR_BASE" == "develop" && "$PR_BRANCH" == feature-* ]]; then
             # nothing happens
-            
+            major="$major"
+            minor="$minor"
+            patch="$patch"
           elif [[ "$PR_BASE" == "main" && "$PR_BRANCH" == "develop" ]]; then
             # Increment middle part for merging develop into main
             minor=$((minor + 1))
